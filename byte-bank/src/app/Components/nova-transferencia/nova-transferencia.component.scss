@@ -1,0 +1,177 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: var(--primary-white);
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+form {
+  width: clamp(290px, 20%, 80%);
+  background-color: var(--secondary-purple);
+  height: 400px;
+  // border-top: solid 1px var(--secondary-purple);
+  // border-bottom: solid 1px var(--secondary-purple);
+  // border-right: solid 1px var(--secondary-purple);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 1.5em;
+  color: var(--primary-white);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+img {
+  height: 500px;
+  width: 500px;
+  animation: toUp 2s ease-in-out infinite;
+}
+
+.valueBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.valueBox input {
+  width: 90%;
+  height: 40px;
+  border: solid 1px var(--secondary-purple);
+  border-radius: 8px;
+  padding: 1em;
+  background-color: var(--2-purple);
+}
+
+.destinyBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destinyBox input {
+  width: 90%;
+  height: 40px;
+  border: solid 1px var(--secondary-purple);
+  border-radius: 8px;
+  padding: 1em;
+  background-color: var(--2-purple);
+}
+
+select{
+  width: 90%;
+  height: 40px;
+  border: solid 1px var(--secondary-purple);
+  border-radius: 8px;
+  padding: 1em;
+  background-color: var(--2-purple);
+}
+
+input:focus {
+  outline: none;
+  border: solid 1px var(--primary-purple);
+  box-shadow: var(--secondary-purple) 0px 10px 10px -10px;
+  caret-color: var(--secondary-purple);
+  // box-shadow: var(--secondary-purple) 0px 5px 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-gray);
+}
+
+::placeholder {
+  color: var(--secondary-purple);
+}
+
+button {
+  margin-top: 30px;
+  width: 50%;
+  height: 35px;
+  background-color: var(--2-purple);
+  border: solid 1px var(--secondary-purple);
+  color: var(--primary-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: ease-in-out 0.5s;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  color: var(--primary-white);
+  background-color: var(--primary-purple);
+  border: solid 1px var(--primary-purple);
+  box-shadow: var(--primary-purple) 0px 5px 15px;
+}
+
+@keyframes toUp {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-2px);
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}

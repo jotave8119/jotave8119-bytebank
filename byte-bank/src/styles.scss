@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'nunito', sans-serif;
+}
+
+:root{
+  --primary-purple: #2f0549;
+  --primary-white: #ffffff;
+  --primary-black: #000000;
+  --primary-gray: #f2f2f2;
+
+  --secondary-gray: #8d8b8b;
+  --secondary-purple:#9f57cc;
+  --1-purple:#9400d3;
+  --2-purple:#dc90fd;
+}
+
+button{
+  cursor: pointer;
+}
+
+
+

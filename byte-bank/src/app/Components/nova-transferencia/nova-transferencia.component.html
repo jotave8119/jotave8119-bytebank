@@ -1,0 +1,24 @@
+<section class="container">
+<h1>ByteBank</h1>
+
+<div class="box">
+  <div>
+    <img src="../../../assets/ilustracao.jpg" alt="ilustração" loading="lazy">
+  </div>
+    <form (ngSubmit)="transferir()">
+        <h2>Nova Transferência</h2>
+        <div class="valueBox">
+          <label for="valor">Valor:</label>
+          <input id="valor" name="valor" type="text" placeholder="Insira o valor desejado" [(ngModel)]="valor"/>
+        </div>
+        <div class="destinyBox">
+          <label for="destino">Destino:</label>
+          <select  id="destino" name="destino" [(ngModel)]="destino">
+            <option value="" disabled selected>Selecione o destino...</option>
+            <option *ngFor="let option of destinoOptions" [value]="option.value">{{option.label}}</option>
+          </select>
+        </div>
+        <button type="submit" title="Realizar">Transferir</button>
+    </form>
+</div>
+</section>
